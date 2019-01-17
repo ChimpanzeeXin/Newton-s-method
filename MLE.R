@@ -1,7 +1,8 @@
 #Simulate censored data~Exp(1/5)
 #R is the indicator function:
 #If Yi>10, R=0(censored)
-Y<-rexp(10,1/5)
+setseed(123)
+Y<-rexp(30,0.2)
 R<-ifelse(Y>10,0,1)
 Y[R==0]=10
 
